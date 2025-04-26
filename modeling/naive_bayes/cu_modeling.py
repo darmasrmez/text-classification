@@ -23,7 +23,7 @@ y = label_encoder.fit_transform(df['Section'])
 
 X_train, X_test, y_train, y_test = train_test_split(X_cupy, y, test_size=0.2, random_state=0, shuffle=True)
 
-# Built a pipeline with CountVectorizer and MultinomialNB
+# Built a pipeline with MultinomialNB
 pipe = Pipeline([
     ('classifier', MultinomialNB())
 ])
